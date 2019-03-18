@@ -98,23 +98,17 @@
 
 
 
-  <meta name="description" content="字符集和字符序字符集（character set）：定义了字符以及字符编码。 字符序（collation）：定义了字符的比较规则。 MySQL支持多种字符集 与 字符序。">
+  <meta name="description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql字符串乱码">
 <meta property="og:url" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/index.html">
 <meta property="og:site_name" content="智">
-<meta property="og:description" content="字符集和字符序字符集（character set）：定义了字符以及字符编码。 字符序（collation）：定义了字符的比较规则。 MySQL支持多种字符集 与 字符序。">
+<meta property="og:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image001.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image002.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image003.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image004.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image006.jpg">
-<meta property="og:updated_time" content="2019-03-17T19:16:27.452Z">
+<meta property="og:updated_time" content="2019-03-18T04:06:21.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql字符串乱码">
-<meta name="twitter:description" content="字符集和字符序字符集（character set）：定义了字符以及字符编码。 字符序（collation）：定义了字符的比较规则。 MySQL支持多种字符集 与 字符序。">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/clip_image001.png">
+<meta name="twitter:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
 
 
 
@@ -230,6 +224,40 @@
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
       
@@ -322,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2019-03-18 02:55:39 / 修改时间：03:16:27" itemprop="dateCreated datePublished" datetime="2019-03-18T02:55:39+08:00">2019-03-18</time>
+              <time title="创建时间：2019-03-18 02:55:39 / 修改时间：12:06:21" itemprop="dateCreated datePublished" datetime="2019-03-18T02:55:39+08:00">2019-03-18</time>
             
 
             
@@ -361,165 +389,234 @@
       
 
       
-        <h1 id="字符集和字符序"><a href="#字符集和字符序" class="headerlink" title="字符集和字符序"></a>字符集和字符序</h1><p>字符集（character set）：定义了字符以及字符编码。</p>
-<p>字符序（collation）：定义了字符的比较规则。</p>
-<p>MySQL支持多种字符集 与 字符序。<br><a id="more"></a></p>
-<ul>
-<li><p>一个字符集对应至少一种字符序（一般是1对多）。</p>
-</li>
-<li><p>两个不同的字符集不能有相同的字符序。</p>
-</li>
-<li><p>每个字符集都有默认的字符序。</p>
-</li>
-</ul>
-<ol>
-<li>查看字符集</li>
-</ol>
-<p>SHOW CHARACTER SET WHERE Charset=”utf8”;</p>
-<p><img src="clip_image001.png" alt="img"></p>
-<ol start="2">
-<li>查看字符序</li>
-</ol>
-<p>SHOW COLLATION WHERE Charset=”utf8”;</p>
-<p><img src="clip_image002.png" alt="img"></p>
-<ol start="3">
-<li>查看当前数据库的字符集</li>
-</ol>
-<p>SHOW VARIABLES LIKE “%character%”;</p>
-<p><img src="clip_image003.png" alt="img"></p>
-<h1 id="字符集设置"><a href="#字符集设置" class="headerlink" title="字符集设置"></a>字符集设置</h1><h2 id="各级别字符集"><a href="#各级别字符集" class="headerlink" title="各级别字符集"></a>各级别字符集</h2><h3 id="服务器默认字符集"><a href="#服务器默认字符集" class="headerlink" title="服务器默认字符集"></a>服务器默认字符集</h3><ol>
-<li>用途：</li>
-</ol>
-<p>默认的内部字符集。创建数据库或表时，若未指定库或表的字符集、字符序，使用该服务器的服务器默认字符集。</p>
-<ol start="2">
-<li>查询Server字符集、字符序</li>
-</ol>
-<p>SHOW VARIABLES LIKE “character_set_server”;</p>
-<p>SHOW VARIABLES LIKE “collation_server”;</p>
-<ol start="3">
-<li>设置Server字符集</li>
-</ol>
-<ul>
-<li>永久生效，需要重启MySQL服务生效。</li>
-</ul>
-<p>修改参数文件my.cnf</p>
-<p>[mysqld]</p>
-<p>character_set_server=utf8</p>
-<p>​                      –影响参数：character_set_server 和 character_set_database</p>
-<p>​                      –注意：修改后要重启数据库才能生效。</p>
-<ul>
-<li>临时生效，重启MySQL服务后丢失。</li>
-</ul>
-<p>mysql&gt;SET GLOBAL character_set_server=utf8;</p>
-<h3 id="数据库字符集"><a href="#数据库字符集" class="headerlink" title="数据库字符集"></a>数据库字符集</h3><ol>
-<li><p>用途：指定数据库级别的字符集。不同数据库可以使用不同字符集。</p>
-</li>
-<li><p>查看字符集：</p>
-</li>
-</ol>
-<p>USE IungoPNT;</p>
-<p>SELECT @@character_set_database, @@collation_database;</p>
-<p><img src="clip_image004.png" alt="图片打不开"></p>
-<ol start="3">
-<li>设置字符集：</li>
-</ol>
-<p>创建数据库时设置。</p>
-<p>CREATE DATABASE IungoPNT DEFAULT CHARACTER SET utf8;</p>
-<p>若未指定字符集，使用character_set_server。</p>
-<h3 id="表字符集"><a href="#表字符集" class="headerlink" title="表字符集"></a>表字符集</h3><ol>
-<li><p>用途：指定表的字符集。不同表可以使用不同字符集。</p>
-</li>
-<li><p>查看字符集：</p>
-</li>
-</ol>
-<p>SHOW TABLE STATUS FROM IungoPNT;</p>
-<p><img src="clip_image006.jpg" alt="图片打不开"></p>
-<ol start="3">
-<li>设置字符集：</li>
-</ol>
-<p>创建表时设置。</p>
-<p>USE IungoPNT;</p>
-<p>DROP TABLE IF EXISTS <code>SysConfig</code>;</p>
-<p>CREATE TABLE <code>SysConfig</code> (</p>
-<p><code>ID</code> INT NOT NULL AUTO_INCREMENT,</p>
-<p><code>ParamID</code> VARCHAR(255) NOT NULL ,</p>
-<p><code>ParamName</code> VARCHAR(255) NOT NULL ,</p>
-<p><code>SubParamID</code> VARCHAR(255) NOT NULL ,</p>
-<p><code>Value</code> VARCHAR(500) NOT NULL ,</p>
-<p>PRIMARY KEY  (<code>ID</code>)</p>
-<p>) auto_increment=1000 default charset=utf8;</p>
-<p>若未指定字符集，使用数据库字符集。</p>
-<h1 id="列字符集"><a href="#列字符集" class="headerlink" title="列字符集"></a>列字符集</h1><p>暂不考虑。</p>
-<p>##字符集系统变量</p>
-<ul>
-<li><p>character_set_server：默认的内部操作字符集</p>
-</li>
-<li><p>character_set_client：客户端来源数据使用的字符集</p>
-</li>
-<li><p>character_set_connection：连接层字符集</p>
-</li>
-<li><p>character_set_results：查询结果字符集</p>
-</li>
-<li><p>character_set_database：当前选中数据库的默认字符集</p>
-</li>
-<li><p>character_set_system：系统元数据(字段名等)字符集</p>
-</li>
-<li><p>字符集指定</p>
-</li>
-</ul>
-<ol>
-<li><p>编译时指定</p>
-</li>
-<li><p>配置文件my.cnf中指定：</p>
-</li>
-</ol>
-<p>[mysqld]</p>
-<p>character_set_server=utf8</p>
-<p> –影响参数：character_set_server 和 character_set_database</p>
-<p>–注意：修改后要重启数据库才能生效。</p>
-<p>[client]</p>
-<p>default-character-set=utf8</p>
-<p>–影响参数：character_set_client，character_set_connection 和character_set_results。</p>
-<p>–注意：修改后无需重启数据库。</p>
-<ol start="3">
-<li>启动时指定：</li>
-</ol>
-<p>a)     ./mysqld –character-set-server=utf8 &amp;</p>
-<p> –影响参数：character_set_server 和 character_set_database</p>
-<p>b)     mysql -uroot -pmysql –default-character-set=utf8</p>
-<p>–影响参数：set character_set_client，set character_set_connection，set character_set_results。</p>
-<ol start="4">
-<li>SQL临时指定：</li>
-</ol>
-<p>a)     分别指定</p>
-<p>mysql&gt; SET character_set_client = utf8;</p>
-<p>mysql&gt; SET character_set_connection = utf8;</p>
-<p>mysql&gt; SET character_set_database = utf8;</p>
-<p>mysql&gt; SET character_set_results = utf8;</p>
-<p>mysql&gt; SET character_set_server = utf8;<a href></a></p>
-<p>b)     mysql客户端使用：set names utf8;</p>
-<p>等价于：</p>
-<p>set character_set_client=utf8;</p>
-<p>set character_set_connection=utf8;</p>
-<p>set character_set_results=utf8;</p>
-<p>c)     set character set utf8;</p>
-<p>等价于：</p>
-<p>set character_set_client=utf8;</p>
-<p>set character_set_results=utf8;</p>
-<p>set collation_connection=@@collation_database;</p>
-<h1 id="字符集转换"><a href="#字符集转换" class="headerlink" title="字符集转换"></a>字符集转换</h1><ol>
-<li><p>MySQL Server收到请求时将请求数据从character_set_client转换为character_set_connection；</p>
-</li>
-<li><p>进行内部操作前将请求数据从character_set_connection转换为内部操作字符集，其确定方法如下：<br> 使用每个数据字段的CHARACTER SET设定值；<br> 若上述值不存在，则使用对应数据表的DEFAULT CHARACTER SET设定值(MySQL扩展，非SQL标准)；<br> 若上述值不存在，则使用对应数据库的DEFAULT CHARACTER SET设定值；<br> 若上述值不存在，则使用character_set_server设定值。</p>
-</li>
-<li><p>将操作结果从内部操作字符集转换为character_set_results。</p>
-</li>
-<li><p>乱码原因：</p>
-<p>字符集转换过程中造成信息丢失。</p>
-<p>大字符集（utf8）往小字符集（gb2312）转换会造成信息丢失，反之不会。</p>
-</li>
-</ol>
+        <pre><code># 字符集和字符序
 
+字符集（character set）：定义了字符以及字符编码。
+
+字符序（collation）：定义了字符的比较规则。
+
+MySQL支持多种字符集 与 字符序。
+&lt;!--more--&gt;
+
+- 一个字符集对应至少一种字符序（一般是1对多）。
+
+- 两个不同的字符集不能有相同的字符序。
+
+- 每个字符集都有默认的字符序。
+
+
+1. 查看字符集
+
+SHOW CHARACTER SET WHERE Charset=&quot;utf8&quot;;
+
+![img](clip_image001.png)
+
+2. 查看字符序
+
+SHOW COLLATION WHERE Charset=&quot;utf8&quot;;
+
+![img](clip_image002.png)
+
+3. 查看当前数据库的字符集
+
+SHOW VARIABLES LIKE &quot;%character%&quot;;
+
+![img](clip_image003.png)
+
+# 字符集设置
+
+## 各级别字符集
+
+### 服务器默认字符集
+
+1. 用途：
+
+默认的内部字符集。创建数据库或表时，若未指定库或表的字符集、字符序，使用该服务器的服务器默认字符集。
+
+2. 查询Server字符集、字符序
+
+SHOW VARIABLES LIKE &quot;character_set_server&quot;;
+
+SHOW VARIABLES LIKE &quot;collation_server&quot;;
+
+3. 设置Server字符集
+
+* 永久生效，需要重启MySQL服务生效。
+
+修改参数文件my.cnf
+
+[mysqld]
+
+character_set_server=utf8
+
+​                      --影响参数：character_set_server 和 character_set_database
+
+​                      --注意：修改后要重启数据库才能生效。
+
+* 临时生效，重启MySQL服务后丢失。
+
+mysql&gt;SET GLOBAL character_set_server=utf8;
+
+### 数据库字符集
+
+1. 用途：指定数据库级别的字符集。不同数据库可以使用不同字符集。
+
+2. 查看字符集：
+
+USE IungoPNT;
+
+SELECT @@character_set_database, @@collation_database;
+
+![图片打不开](clip_image004.png)
+
+3. 设置字符集：
+
+创建数据库时设置。
+
+CREATE DATABASE IungoPNT DEFAULT CHARACTER SET utf8;
+
+若未指定字符集，使用character_set_server。
+
+### 表字符集
+
+1. 用途：指定表的字符集。不同表可以使用不同字符集。
+
+2. 查看字符集：
+
+SHOW TABLE STATUS FROM IungoPNT;
+
+![图片打不开](clip_image006.jpg)
+
+3. 设置字符集：
+
+创建表时设置。
+
+USE IungoPNT;
+
+DROP TABLE IF EXISTS `SysConfig`;
+
+CREATE TABLE `SysConfig` (
+
+`ID` INT NOT NULL AUTO_INCREMENT,
+
+`ParamID` VARCHAR(255) NOT NULL ,
+
+`ParamName` VARCHAR(255) NOT NULL ,
+
+`SubParamID` VARCHAR(255) NOT NULL ,
+
+`Value` VARCHAR(500) NOT NULL ,
+
+PRIMARY KEY  (`ID`)
+
+
+
+) auto_increment=1000 default charset=utf8;
+
+若未指定字符集，使用数据库字符集。
+
+# 列字符集
+
+暂不考虑。
+
+##字符集系统变量
+
+- character_set_server：默认的内部操作字符集
+
+- character_set_client：客户端来源数据使用的字符集
+
+- character_set_connection：连接层字符集
+
+- character_set_results：查询结果字符集
+
+- character_set_database：当前选中数据库的默认字符集
+
+- character_set_system：系统元数据(字段名等)字符集
+
+- 字符集指定
+
+1. 编译时指定
+
+2. 配置文件my.cnf中指定：
+
+[mysqld]
+
+character_set_server=utf8
+
+ --影响参数：character_set_server 和 character_set_database
+
+--注意：修改后要重启数据库才能生效。
+
+[client]
+
+default-character-set=utf8
+
+--影响参数：character_set_client，character_set_connection 和character_set_results。
+
+--注意：修改后无需重启数据库。
+
+3. 启动时指定：
+
+a)     ./mysqld --character-set-server=utf8 &amp;
+
+ --影响参数：character_set_server 和 character_set_database
+
+b)     mysql -uroot -pmysql --default-character-set=utf8
+
+--影响参数：set character_set_client，set character_set_connection，set character_set_results。
+
+4. SQL临时指定：
+
+a)     分别指定
+
+mysql&gt; SET character_set_client = utf8;
+
+mysql&gt; SET character_set_connection = utf8;
+
+mysql&gt; SET character_set_database = utf8;
+
+mysql&gt; SET character_set_results = utf8;
+
+mysql&gt; SET character_set_server = utf8;[]()
+
+b)     mysql客户端使用：set names utf8;
+
+等价于：
+
+set character_set_client=utf8;
+
+set character_set_connection=utf8;
+
+set character_set_results=utf8;
+
+c)     set character set utf8;
+
+等价于：
+
+set character_set_client=utf8;
+
+set character_set_results=utf8;
+
+set collation_connection=@@collation_database;
+
+# 字符集转换
+
+1. MySQL Server收到请求时将请求数据从character_set_client转换为character_set_connection；
+
+2. 进行内部操作前将请求数据从character_set_connection转换为内部操作字符集，其确定方法如下：
+    使用每个数据字段的CHARACTER SET设定值；
+    若上述值不存在，则使用对应数据表的DEFAULT CHARACTER SET设定值(MySQL扩展，非SQL标准)；
+    若上述值不存在，则使用对应数据库的DEFAULT CHARACTER SET设定值；
+    若上述值不存在，则使用character_set_server设定值。
+
+3. 将操作结果从内部操作字符集转换为character_set_results。
+
+4. 乱码原因：
+
+   字符集转换过程中造成信息丢失。
+
+   大字符集（utf8）往小字符集（gb2312）转换会造成信息丢失，反之不会。
+</code></pre>
       
     </div>
 
@@ -549,15 +646,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/18/WPF依赖属性/" rel="prev" title="WPF依赖属性(转载(https://www.cnblogs.com/dotnet261010/p/6286475.html))">
+                WPF依赖属性(转载(https://www.cnblogs.com/dotnet261010/p/6286475.html)) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -601,17 +698,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -626,7 +714,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
@@ -659,23 +747,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符集和字符序"><span class="nav-number">1.</span> <span class="nav-text">字符集和字符序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符集设置"><span class="nav-number">2.</span> <span class="nav-text">字符集设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#各级别字符集"><span class="nav-number">2.1.</span> <span class="nav-text">各级别字符集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器默认字符集"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器默认字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库字符集"><span class="nav-number">2.1.2.</span> <span class="nav-text">数据库字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表字符集"><span class="nav-number">2.1.3.</span> <span class="nav-text">表字符集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列字符集"><span class="nav-number">3.</span> <span class="nav-text">列字符集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符集转换"><span class="nav-number">4.</span> <span class="nav-text">字符集转换</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
