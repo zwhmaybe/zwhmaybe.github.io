@@ -98,17 +98,17 @@
 
 
 
-  <meta name="description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
+  <meta name="description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql字符串乱码">
 <meta property="og:url" content="http://yoursite.com/2019/03/18/Mysql字符串乱码/index.html">
 <meta property="og:site_name" content="智">
-<meta property="og:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
+<meta property="og:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-18T04:06:21.238Z">
+<meta property="og:updated_time" content="2019-03-18T05:10:13.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql字符串乱码">
-<meta name="twitter:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。 &amp;lt;!--more--&amp;gt;  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。   1. 查看字符集  SHOW CHARAC">
+<meta name="twitter:description" content="# 字符集和字符序  字符集（character set）：定义了字符以及字符编码。  字符序（collation）：定义了字符的比较规则。  MySQL支持多种字符集 与 字符序。  - 一个字符集对应至少一种字符序（一般是1对多）。  - 两个不同的字符集不能有相同的字符序。  - 每个字符集都有默认的字符序。">
 
 
 
@@ -333,7 +333,7 @@
                 
               
 
-              <time title="创建时间：2019-03-18 02:55:39 / 修改时间：12:06:21" itemprop="dateCreated datePublished" datetime="2019-03-18T02:55:39+08:00">2019-03-18</time>
+              <time title="创建时间：2019-03-18 02:55:39 / 修改时间：13:10:13" itemprop="dateCreated datePublished" datetime="2019-03-18T02:55:39+08:00">2019-03-18</time>
             
 
             
@@ -379,16 +379,14 @@
 字符序（collation）：定义了字符的比较规则。
 
 MySQL支持多种字符集 与 字符序。
-&lt;!--more--&gt;
 
 - 一个字符集对应至少一种字符序（一般是1对多）。
 
 - 两个不同的字符集不能有相同的字符序。
 
 - 每个字符集都有默认的字符序。
-
-
-1. 查看字符集
+</code></pre><a id="more"></a>
+<pre><code>1. 查看字符集
 
 SHOW CHARACTER SET WHERE Charset=&quot;utf8&quot;;
 
@@ -432,9 +430,9 @@ SHOW VARIABLES LIKE &quot;collation_server&quot;;
 
 character_set_server=utf8
 
-​                      --影响参数：character_set_server 和 character_set_database
+                 --影响参数：character_set_server 和 character_set_database
 
-​                      --注意：修改后要重启数据库才能生效。
+                 --注意：修改后要重启数据库才能生效。
 
 * 临时生效，重启MySQL服务后丢失。
 
